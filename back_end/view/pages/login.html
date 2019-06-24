@@ -1,0 +1,31 @@
+{{extend "./layouts/layouts2.html"}}
+
+{{block "title"}}
+<title>游说-用户登录</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/login.css">
+<script src="/assets/js/login.js"></script>
+<script src="../assets/js/jq-slideVerify.js"></script>
+{{/block}}
+
+{{block "body"}}
+<!-- main -->
+<div class="main">
+    <div class="container">
+        <div class="form-box">
+            <h2>游说账号登录</h2>
+            <div class="user">
+                <input type="text" placeholder="用户名 / 邮箱">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="登录密码">
+            </div>
+            <div class="verify-wrap" id="verify-wrap"></div>
+            <a href="javascript:;" class="login">登 录</a><br>
+            <a href="register" class="reset">免 费 注 册</a>
+        </div>
+    </div>
+</div>
+{{/block}}

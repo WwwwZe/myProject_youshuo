@@ -1,0 +1,128 @@
+{{extend '../pages/layouts/layouts.html'}}
+
+{{block "title"}}
+<title>游记</title>
+{{/block}}
+
+{{block 'css/js'}}
+<link rel="stylesheet" href="/assets/less/travels.css">
+<link rel="stylesheet" href="/assets/less/strategy.css">
+<script src="/assets/js/strategy.js"></script>
+<script src="/assets/lib/twbs-pagination/jquery.twbsPagination.min.js"></script>
+
+{{/block}}
+
+
+{{block 'body'}}
+<!-- body -->
+<div class="body">
+  <!-- header -->
+  <div class="body_header container">
+    <ul class="body_nav">
+      <!-- <li class="active">
+          <a href="">全部</a>
+        </li>
+        <li>
+          <a href="">国内</a>
+        </li> -->
+      <li {{if id == -1}}class="active" {{/if}}>
+        <a href="/strategy">全部</a>
+      </li>
+      {{each nav v}}
+      <li style="height:50px" {{if id == v.id}}class="active" {{/if}}>
+        <a href="/strategy/{{v.id}}">
+          <span class="iconfont {{v.icon}}"></span>
+          {{v.name}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <!-- main -->
+  <div class="main container">
+    <!-- right -->
+    <div class="right">
+      <div class="title clearfix">
+        <h2>{{title}}</h2>
+      </div>
+      <div class="list_content">
+        <!-- 模板 -->
+      </div>
+      <div class="page clearfix">
+        <ul class="pagination clearfix"> </ul>
+      </div>
+    </div>
+    <!-- left -->
+    <div class="left">
+      <div class="search clearfix">
+        <div class="title clearfix">
+          <h3>搜索</h3>
+        </div>
+        <div class="searchbar">
+          <input type="text" placeholder="搜索游记相关内容">
+          <button>
+            <span class="iconfont icon-ai219"></span>
+          </button>
+          <div class="searchList">
+            <ul>
+              <!-- <li><a href="">11</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="random">
+        <div class="title clearfix">
+          <h3>随机推荐</h3>
+        </div>
+        <div class="content">
+          <ul>
+            {{each rand v}}
+            <li>
+              <a href="/detail/{{v.a_id}}">
+                <div class="text">
+                  {{v.a_title}}
+                </div>
+                <div class="pic">
+                  <img src="{{v.a_file}}" alt="{{v.a_title}}">
+                </div>
+              </a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/block}}
+
+{{block "js"}}
+<script type="text/html" id="pagelist">
+  {(each article v)}
+  <div class="r_item">
+    <a href="/detail/{(v.a_id)}">
+      <div class="r_pic">
+        <img src="{(v.a_file)}" alt="{(v.a_title)}" />
+      </div>
+      <div class="r_text">
+        <h3 class="r_title">
+          {(v.a_title)}
+        </h3>
+        <p>
+          <span>{(v.u_nickname)}</span>
+          发表于 <span>{(v.a_addtime)}</span>
+        </p>
+        <div class="r_desc">
+          {(v.a_desc)}
+        </div>
+        <p class="r_tab">
+          <span class="comment">评论({(v.a_cmt)})</span>
+          <br>
+          <span class="reading">阅读({(v.a_click)})</span>
+        </p>
+      </div>
+    </a>
+  </div>
+  {(/each)}
+</script>
+{{/block}}

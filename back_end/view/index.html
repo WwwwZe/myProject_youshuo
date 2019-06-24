@@ -1,0 +1,229 @@
+{{ extend "./pages/layouts/layouts.html" }}
+
+{{block "title"}}
+<title>{{setting.st_title}}</title>
+<meta name="description" content="{{setting.st_description}}">
+<meta name="keywords" content="{{setting.st_keywords}}">
+{{/block}}
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/index.css" />
+<script src="/assets/js/index.js"></script>
+{{/block}}
+
+{{block "body"}}
+<!-- body -->
+<div class="body">
+  <!-- top search -->
+  <div class="top container clearfix">
+    <div class="fl left">
+      <h3>
+        <span class="iconfont icon-lvyou"></span>
+        旅游攻略
+      </h3>
+      <ul class="subnav">
+        {{each subnav v}}
+        <li>
+          <span class="iconfont {{v.t2_icon}}"></span>
+          <a href="/strategy/{{v.t2_id}}">
+            <em>{{v.t2_name}}</em>
+            <p>{{v.t2_desc}}</p>
+          </a>
+          <i class="iconfont icon-jiantou"></i>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="fl search">
+      <span class="iconfont icon-ai219"></span>
+      <input type="text" placeholder="搜索相关攻略 / 问答" />
+      <a href="javascript:;" class="btn">搜索</a>
+      <div class="searchList">
+        <ul>
+          <!-- <li><a href="#">11111</a></li> -->
+        </ul>
+        <div class="more fr">
+          <a href="#">更多>></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slide -->
+  <div class="slide_box container clearfix">
+    <div class="right fr">
+      <ul>
+        <li>
+          <span class="iconfont icon-huiyuan"></span>
+          <p>
+            <i>{{ userNum }}</i>
+            位会员
+          </p>
+        </li>
+        <li>
+          <span class="iconfont icon-pinglun1"></span>
+          <p>
+            <i>{{ commentNum }}</i>
+            条评论
+          </p>
+        </li>
+        <li>
+          <span class="iconfont icon-gonglve1"></span>
+          <p>
+            <a href="/travels">
+              <i>{{ articleNum }}</i>
+              篇游记
+            </a>
+          </p>
+        </li>
+        <li>
+          <span class="iconfont icon-wendabangzhu"></span>
+          <p>
+            <a href="/asks">
+              <i>{{ askNum }}</i>
+              个问答
+            </a>
+          </p>
+        </li>
+      </ul>
+      <div class="empty"></div>
+    </div>
+    <div class="slide fr">
+      <ul class="slideList">
+        <!-- <li>
+          <a href="#">
+            <img src="../uploads/slide_1.jpg" alt="" />
+            <span>和闺蜜一起自驾踏青，探索杭州小众玩法</span>
+          </a>
+        </li> -->
+      </ul>
+      <div class="circle">
+        <!-- <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="active"></span> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="main container">
+    <!-- left -->
+    <div class="left">
+      <!-- focus -->
+      <div class="focus">
+        <div class="title">
+          <h3>焦点关注</h3>
+        </div>
+        <div class="focus_box content">
+          <ul class="clearfix">
+            {{each focus v}}
+            <li>
+              <a href="/detail/{{v.a_id}}">
+                <div class="img">
+                  <img src="{{v.a_file}}" alt="{{v.a_title}}" />
+                </div>
+                <div class="text">
+                  <span>{{v.a_title}}</span>
+                </div>
+              </a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <!-- hots_ranking -->
+      <div class="hots_ranking">
+        <div class="title">
+          <h3>热门排行</h3>
+        </div>
+        <div class="content">
+          <ol>
+            {{each hots v,k}}
+            <li>
+              <i>{{k+1}}</i>
+              <a href="/detail/{{v.a_id}}" class="tit">{{v.a_title}}</a>
+              <span class="comment">评论({{v.a_cmt}})</span>
+              <span>阅读({{v.a_click}})</span>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+      <!-- recommend -->
+      <div class="recommend">
+        <div class="title">
+          <h3>推荐游记</h3>
+        </div>
+        <div class="r_content">
+          {{each rec v}}
+          <div class="r_item">
+            <div class="r_pic">
+              <a href="/detail/{{v.a_id}}">
+                <img src="{{v.a_file}}" alt="{{v.a_title}}" />
+              </a>
+            </div>
+            <div class="r_text">
+              <h3 class="r_title">
+                <a href="/detail/{{v.a_id}}">{{v.a_title}}</a>
+              </h3>
+              <p>
+                <span>{{v.u_nickname}}</span>
+                发表于 <span>{{v.a_addtime}}</span>
+              </p>
+              <div class="r_desc">
+                {{v.a_desc}}
+              </div>
+              <p>
+                <span class="comment">评论({{v.a_cmt}})</span>
+                <span class="reading">阅读({{v.a_click}})</span>
+              </p>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="title">
+        <h3>最新点评</h3>
+      </div>
+      <div class="comment content">
+        <ul>
+          {{each comment v}}
+          <li class="clearfix">
+            <div class="top">
+              <div class="avatar fl">
+                <img src="{{v.u_pic}}" />
+              </div>
+              <div class="text fl">
+                <span class="user">{{v.u_nickname}}</span>
+                点评了
+                <a href="/detail/{{v.a_id}}" class="article">{{v.a_title}}</a>
+              </div>
+            </div>
+            <div class="bottom">
+              <i>“</i>
+              {{v.cmt_content}}
+              <span>”</span>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{/block}}
+
+{{block "js"}}
+<script type="text/html" id="slideList">
+  {(each slideList v)}
+  <li>
+    <a href="{(v.link)}">
+      <img src="{(v.url)}" alt="{(v.text)}" />
+      <span>{(v.text)}</span>
+    </a>
+  </li>
+  {(/each)}
+</script>
+{{/block}}

@@ -1,0 +1,211 @@
+body {
+  position: relative
+}
+
+#e_background {
+  background: #022436 url(../img/e_stars.png) repeat 20% 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+  -webkit-animation: stars-anim 600s infinite linear;
+  -moz-animation: stars-anim 600s infinite linear;
+  -o-animation: stars-anim 600s infinite linear;
+  animation: stars-anim 600s infinite linear
+}
+
+#e_smallstars {
+  background: url(../img/smallstars.png) repeat 20% 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -50;
+  -webkit-animation: light 4s infinite alternate;
+  -moz-animation: light 4s infinite alternate;
+  -o-animation: light 4s infinite alternate;
+  animation: light 4s infinite alternate
+}
+
+#e_moon {
+  background: url(../img/e_moon2.png) no-repeat 35% 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: -25;
+  -webkit-animation: moon-anim 100s infinite linear;
+  -moz-animation: moon-anim 100s infinite linear;
+  -o-animation: moon-anim 100s infinite linear;
+  animation: moon-anim 100s infinite linear
+}
+
+@media only screen and (max-width:480px) {
+  #e_moon {
+    background: url(../img/e_moon2_sm.png) no-repeat 35% 35%
+  }
+}
+
+@media only screen and (min-width:481px) and (max-width:767px) {
+  #e_moon {
+    background: url(../img/e_moon2_md.png) no-repeat 35% 35%
+  }
+}
+
+@-webkit-keyframes moon-anim {
+  from {
+    background-position: 0 2%
+  }
+
+  to {
+    background-position: 110% 2%
+  }
+}
+
+@-moz-keyframes moon-anim {
+  from {
+    background-position: 0 2%
+  }
+
+  to {
+    background-position: 110% 2%
+  }
+}
+
+@-o-keyframes moon-anim {
+  from {
+    background-position: 0 2%
+  }
+
+  to {
+    background-position: 110% 2%
+  }
+}
+
+@keyframes moon-anim {
+  from {
+    background-position: 0 2%
+  }
+
+  to {
+    background-position: 110% 2%
+  }
+}
+
+@-webkit-keyframes stars-anim {
+  from {
+    background-position: 5% 600%
+  }
+
+  to {
+    background-position: 1300% 5%
+  }
+}
+
+@-moz-keyframes stars-anim {
+  from {
+    background-position: 5% 600%
+  }
+
+  to {
+    background-position: 1300% 5%
+  }
+}
+
+@-o-keyframes stars-anim {
+  from {
+    background-position: 5% 600%
+  }
+
+  to {
+    background-position: 1300% 5%
+  }
+}
+
+@keyframes stars-anim {
+  from {
+    background-position: 5% 600%
+  }
+
+  to {
+    background-position: 1300% 5%
+  }
+}
+
+@-webkit-keyframes light {
+  0% {
+    opacity: .1
+  }
+
+  25% {
+    opacity: .35
+  }
+
+  50% {
+    opacity: .95
+  }
+
+  100% {
+    opacity: .2
+  }
+}
+
+@-moz-keyframes light {
+  0% {
+    opacity: .1
+  }
+
+  25% {
+    opacity: .35
+  }
+
+  50% {
+    opacity: .95
+  }
+
+  100% {
+    opacity: .2
+  }
+}
+
+@-o-keyframes light {
+  0% {
+    opacity: .1
+  }
+
+  25% {
+    opacity: .35
+  }
+
+  50% {
+    opacity: .95
+  }
+
+  100% {
+    opacity: .2
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: .1
+  }
+
+  25% {
+    opacity: .35
+  }
+
+  50% {
+    opacity: .95
+  }
+
+  100% {
+    opacity: .2
+  }
+}

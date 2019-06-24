@@ -1,0 +1,75 @@
+{{extend "./layouts/layouts.html"}}
+
+{{block "title"}}
+<title>编辑个人资料</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="../assets/less/userInfoUpdate.css">
+<script src="../assets/js/userInfoUpdate.js"></script>
+<script src="/assets/lib/validate/jquery.validate.js"></script>
+{{/block}}
+
+{{block "body"}}
+<div class="main">
+    <div class="m_header w">
+        <img src="../assets/images/member-bg.jpg" alt="背景图片">
+    </div>
+    <div class="w">
+        <div class="form_box">
+            <h2>编辑个人资料</h2>
+            <form id="updateUserForm">
+                <div>
+                    <label for="avatar">选择头像:</label>
+                    <div class="pic">
+                        <input type="file" id="avatar">
+                    </div>
+                    <label class="show" for="avatar">
+                        {{if userInfo.u_pic}}
+                        <img src="{{userInfo.u_pic}}">
+                        {{else}}
+                        +
+                        {{/if}}
+                    </label>
+                    <input type="hidden" name="picurl" id="picurl" class="picurl" value="{{userInfo.u_pic}}">
+                </div>
+                <div>
+                    <label for="nickname"><i>*</i> 昵称:</label>
+                    <input type="text" id="nickname" name="nickname" value="{{userInfo.u_nickname}}" readonly>
+                </div>
+                <div>
+                    <label for="email"><i>*</i> 邮箱:</label>
+                    <input type="text" id="email" name="email" value="{{userInfo.u_email}}" readonly>
+                </div>
+                <div>
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name" value="{{userInfo.u_name}}">
+                </div>
+                <div>
+                    <label for="name">性别:</label>
+                    <input type="radio" name="gender" value="保密" {{if userInfo.u_gender=="保密"}} checked{{/if}}> 保密
+                    <input type="radio" name="gender" value="男" {{if userInfo.u_gender=="男"}} checked{{/if}}> 男
+                    <input type="radio" name="gender" value="女" {{if userInfo.u_gender=="女"}} checked{{/if}}> 女
+                </div>
+                <!-- <div>
+                    <label for="age">年龄:</label>
+                    <input type="text" id="age" name="age">
+                </div> -->
+                <div>
+                    <label for="tel">电话:</label>
+                    <input type="text" id="tel" name="tel" value="{{userInfo.u_tel}}">
+                </div>
+                <div>
+                    <label for="sign">签名:</label>
+                    <textarea id="sign" cols="60" rows="6" name="sign">{{userInfo.u_sign}}</textarea>
+                </div>
+                <div class="btn">
+                    <input type="submit" value=" 保 存 " class="save">
+                    <input type="button" value=" 重 置 " class="reset">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{{/block}}

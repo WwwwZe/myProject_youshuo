@@ -1,0 +1,151 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 1200px;
+}
+
+/* 设置侧导航收起时子菜单样式 */
+.el-menu--vertical {
+  opacity: 0.5;
+  margin-left: -3px;
+}
+
+.el-menu-item-group__title {
+  padding: 0;
+}
+
+/* 面包屑导航样式 */
+.el-breadcrumb__inner {
+  color: #eee !important;
+}
+
+.el-breadcrumb .is-link {
+  color: #fff !important;
+}
+
+.el-breadcrumb .is-link:hover {
+  color: #FFD04B !important;
+}
+
+/* 卡片区样式 */
+.box-card {
+  margin-top: 15px;
+  background-color: rgba(0, 0, 0, .3);
+  color: #fff;
+  border: 1px solid #555;
+  box-shadow: 0 1px 1px #eee;
+}
+
+/* 搜索条样式 */
+.el-input-group__append {
+  background-color: transparent;
+  color: #fff;
+}
+
+.search-text .el-input__inner {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f4f4f4;
+}
+
+.search-btn {
+  background-color: rgba(0, 0, 0, .3) !important;
+}
+
+/* 表格样式 */
+.el-table {
+  margin-top: 15px;
+  background-color: transparent;
+}
+
+tr,
+th {
+  background-color: rgba(0, 0, 0, .2) !important;
+  color: #fff;
+}
+
+tr:hover {
+  color: #000;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background-color: #bbb;
+}
+
+.el-table__expand-icon {
+  color: #fff;
+}
+
+tr:hover .el-table__expand-icon {
+  color: #000;
+}
+
+.el-table__expanded-cell {
+  background-color: transparent;
+  color: #fff;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #EED04B;
+    border-color: #fff;
+}
+
+/* 分页 */
+.el-pagination {
+  margin-top: 15px;
+}
+
+.el-pagination span {
+  color: #fff;
+}
+
+.el-pager li.active {
+  color: #FFD04B;
+}
+
+.el-pager li:hover {
+  color: #FFD04B;
+}
+
+.el-select-dropdown__item.selected {
+  color: #FFD04B;
+}
+
+.el-pagination .el-icon-arrow-right,
+.el-icon-arrow-left {
+  color: #555;
+}
+
+.el-pagination .el-icon-arrow-right:hover,
+.el-icon-arrow-left:hover {
+  color: #FFD04B;
+}
+
+/* 开关样式 */
+.el-switch.is-checked .el-switch__core {
+  border-color: #fff !important;
+}
+
+.el-switch__label.is-active {
+  color: #FFD04B;
+}
+
+/* 标签页样式 */
+.el-tabs__item {
+  color: #eee;
+}
+
+.el-tabs__item.is-active {
+  color: #FFD04B;
+}
+
+.el-tabs__active-bar {
+  background-color: #FFD04B;
+}
+
+.el-tabs__item:hover {
+  color: #FFD04B;
+}

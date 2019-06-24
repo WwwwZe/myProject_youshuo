@@ -1,0 +1,346 @@
+.main {
+  margin-top: 15px;
+}
+.main .top {
+  margin-bottom: 25px;
+}
+.main .top .title h2 {
+  font-size: 24px;
+  color: #34b1ea;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.main .top .search {
+  position: relative;
+}
+.main .top .search input {
+  float: left;
+  border: 2px solid #37b1ea;
+  border-right: 0;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 5px 10px 15px;
+  width: 635px;
+  color: #555;
+}
+.main .top .search .searchbtn {
+  float: left;
+  width: 100px;
+  height: 40px;
+  background-color: #37b1ea;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  border: 0;
+  border-bottom: 2px solid #319fd2;
+}
+.main .top .search .searchbtn:hover {
+  background-color: #00a7e1;
+  border-bottom: 2px solid #0096ca;
+}
+.main .top .search .askbtn {
+  float: left;
+  width: 128px;
+  height: 40px;
+  margin-left: 15px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #ff9912;
+  color: #fff;
+  border-bottom: 2px solid #e58910;
+  border-radius: 2px;
+}
+.main .top .search .askbtn:hover {
+  background-color: #ff7536;
+  border-bottom: 2px solid #e56930;
+}
+.main .top .search .askbtn span {
+  vertical-align: middle;
+}
+.main .top .search .askbtn i {
+  font-size: 35px;
+  vertical-align: middle;
+}
+.main .top .search .searchList {
+  display: none;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 99;
+  width: 654px;
+  background-color: #fff;
+  border: 2px solid #37b1ea;
+  border-top: 0;
+}
+.main .top .search .searchList ul {
+  padding: 10px;
+}
+.main .top .search .searchList ul a {
+  display: block;
+  padding: 0 5px 0 7px;
+  line-height: 32px;
+  color: #333;
+  border-bottom: 1px dotted #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main .top .search .searchList ul a:hover {
+  background-color: #eee;
+}
+.main .content {
+  display: flex;
+}
+.main .left {
+  flex: 1;
+  padding: 20px 25px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+}
+.main .left .ask {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ddd;
+}
+.main .left .ask .a_info {
+  padding-bottom: 15px;
+}
+.main .left .ask .a_info span {
+  font-size: 14px;
+  color: #484848;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.main .left .ask .a_info i {
+  font-size: 12px;
+  color: #999;
+}
+.main .left .ask .a_title {
+  width: 100%;
+  font-size: 22px;
+  line-height: 30px;
+  color: #484848;
+  margin-bottom: 10px;
+}
+.main .left .ask .a_title span {
+  color: #0096ca;
+  font-size: 28px;
+  margin-right: 5px;
+}
+.main .left .ask .a_desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 28px;
+}
+.main .left .answer {
+  padding: 40px 0 0 100px;
+}
+.main .left .answer .textarea {
+  width: 100%;
+  height: 130px;
+  border: 1px solid #ddd;
+  padding-bottom: 20px;
+  background-color: #f7f7f7;
+  text-align: right;
+}
+.main .left .answer textarea {
+  width: 100%;
+  height: 130px;
+  padding: 10px;
+  resize: none;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.main .left .answer a {
+  display: block;
+  width: 90px;
+  height: 34px;
+  margin-top: 15px;
+  line-height: 36px;
+  font-size: 18px;
+  background-color: #ff9912;
+  border-bottom: 2px solid #e58910;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+}
+.main .left .answer a:hover {
+  background-color: #ff7536;
+  border-bottom: 2px solid #e56930;
+}
+.main .left .list {
+  padding-top: 30px;
+}
+.main .left .list .l_title h3 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #484848;
+}
+.main .left .list .item {
+  position: relative;
+  min-height: 60px;
+  padding: 30px 0 20px 74px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.main .left .list .item .pic {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 60px;
+  height: 60px;
+}
+.main .left .list .item .pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.main .left .list .item .text .info {
+  font-size: 12px;
+  color: #999;
+  padding-bottom: 10px;
+}
+.main .left .list .item .text .info span {
+  color: #484848;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+.main .left .list .item .text .txt {
+  line-height: 26px;
+  font-size: 14px;
+  color: #484848;
+}
+.main .left .list .page {
+  padding: 20px;
+}
+.main .left .list .pagination {
+  float: right;
+  margin-right: 10px;
+}
+.main .left .list .pagination .active {
+  background-color: #0a56bb;
+}
+.main .left .list .pagination .active a {
+  color: #fff;
+}
+.main .left .list .pagination .active:hover {
+  background-color: #0a56bb;
+}
+.main .left .list .pagination li {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-left: 0;
+}
+.main .left .list .pagination li a {
+  color: #333;
+}
+.main .left .list .pagination li:first-child {
+  border-left: 1px solid #ddd;
+}
+.main .left .list .pagination li:last-child,
+.main .left .list .pagination li:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.main .left .list .pagination li:hover {
+  background-color: #eee;
+}
+.main .right {
+  width: 275px;
+  margin-left: 25px;
+}
+.main .right .login {
+  background-color: #fff;
+  height: 110px;
+  border: 1px solid #e6e6e6;
+}
+.main .right .login .pic {
+  padding: 15px;
+}
+.main .right .login .pic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.main .right .login .info {
+  padding-top: 30px;
+}
+.main .right .login .info a {
+  font-size: 16px;
+  color: #41a1e1;
+}
+.main .right .login .info a:hover {
+  text-decoration: underline;
+}
+.main .right .login .info p {
+  padding-top: 10px;
+}
+@media (max-width: 1200px) {
+  .top .search input {
+    width: 435px !important;
+  }
+  .top .search .searchList {
+    width: 455px !important;
+  }
+  .content .left .question {
+    width: 470px !important;
+  }
+}
+.form-box {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 50px;
+}
+.form-box h2 {
+  color: #111;
+  font-size: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #ccc;
+}
+.form-box div {
+  padding: 8px 0;
+}
+.form-box input {
+  width: 300px;
+  height: 28px;
+  padding: 5px 5px 5px 13px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+  border-radius: 3px;
+}
+.form-box input:focus {
+  border-color: rgba(102, 175, 233, 0.8);
+  box-shadow: 0 0 0 2px rgba(102, 175, 233, 0.4);
+}
+.form-box a {
+  display: inline-block;
+  width: 320px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-box .login {
+  background-color: #FF9A14;
+}
+.form-box .login:hover {
+  background-color: #CC7B10;
+}
+.form-box .reset {
+  background-color: #ccc;
+}
+.form-box .reset:hover {
+  background-color: #aaa;
+}

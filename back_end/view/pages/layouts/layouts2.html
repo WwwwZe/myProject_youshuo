@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{block "title"}}
+    {{/block}}
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/lib/nprogress/nprogress.css">
+    <script src="/assets/lib/jquery/jquery.min.js"></script>
+    <script src="/assets/lib/layer/layer.js"></script>
+    <script src="/assets/lib/nprogress/nprogress.js"></script>
+    {{block "css/js"}}
+    {{/block}}
+</head>
+
+<body>
+    <script>
+        NProgress.start()
+    </script>
+    <!-- header -->
+    <div class="header container">
+        <h1>
+            <a href="/index">
+                <img src="../assets/images/logo.png" alt="ys" />
+            </a>
+        </h1>
+    </div>
+
+    {{block "body"}}
+    {{/block}}
+
+    <!-- footer -->
+    <div class="footer container">
+        <p>
+            © 2019 游说社区旅游攻略网站 本站由 吉林农业科技学院 电气与信息工程学院
+            计算机二班 王泽 提供
+        </p>
+    </div>
+    <script>
+        NProgress.done()
+    </script>
+</body>
+{{block "js"}}
+{{/block}}
+
+</html>

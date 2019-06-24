@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url(http://fonts.useso.com/css?family=Play);
+
+/* Live Preview style */
+/* you donot need this style for your background */
+html,
+body,
+div,
+section,
+article,
+aside,
+header,
+hgroup,
+footer,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+time,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+figure,
+canvas,
+video,
+th,
+td,
+tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+body {
+  /* width: 60%;
+    margin: 5% auto; */
+  font-family: 'Play', sans-serif;
+}
+
+#content {
+
+  background-color: rgba(255, 255, 255, .5);
+  width: 70%;
+  height: 100%;
+  padding: 5%;
+  border-radius: 25px;
+  margin: 5% auto;
+}
+
+#content>p {
+  width: 90%;
+  padding: 10px 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content h1 {
+  color: #cc0;
+  font-size: 1.4em;
+  font-weight: bold;
+  width: 90%;
+  padding: 5px 2.5%;
+  margin: 5px auto;
+  text-align: center;
+}
+
+#content p {
+  color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* -------------------- Mobile Style -------------------- */
+@media only screen and (max-width:480px) {
+  body {
+    width: 90%;
+  }
+
+  #content {
+    width: 90%;
+  }
+}
+
+/* -------------------- Tablet Style -------------------- */
+@media only screen and (min-width:481px) and (max-width:767px) {
+  body {
+    width: 80%;
+  }
+
+  #content {
+    width: 85%;
+  }
+}
+
+
+.btn {
+  color: #ccf;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  color: firebrick;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333;
+  text-decoration: none;
+
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}

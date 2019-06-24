@@ -1,0 +1,129 @@
+.main {
+  background-color: #fff;
+  padding: 30px;
+}
+.main .top {
+  padding-bottom: 20px;
+}
+.main .bottom {
+  display: flex;
+}
+.main .left {
+  width: 130px;
+  margin-right: 30px;
+}
+.main .left a.active {
+  color: #fff;
+  background-color: #06c;
+}
+.main .left a.active span {
+  color: #fff;
+}
+.main .left a.active:hover {
+  color: #fff;
+  background-color: #06c;
+}
+.main .left a.active:hover span {
+  color: #fff;
+}
+.main .left a {
+  display: block;
+  height: 30px;
+  color: #00a7e1;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+}
+.main .left a span {
+  font-size: 12px;
+  color: #333;
+  margin-left: 5px;
+}
+.main .left a:hover {
+  background-color: #deecfd;
+}
+.main .right {
+  flex: 1;
+  padding-right: 100px;
+}
+.main .right .title {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.main .right .title h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.main .right .title h3 span {
+  font-size: 14px;
+}
+.main .right .list .empty {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.main .right .list .item {
+  padding: 15px 5px;
+  border-bottom: 1px solid #ddd;
+}
+.main .right .list .item .pic {
+  width: 180px;
+  margin-right: 20px;
+}
+.main .right .list .item .pic img {
+  width: 100%;
+}
+.main .right .list .item .text {
+  width: 500px;
+}
+.main .right .list .item .text .a_title {
+  padding-bottom: 10px;
+}
+.main .right .list .item .text .a_title a {
+  font-size: 16px;
+  color: #00a7e1;
+}
+.main .right .list .item .text .a_title a:hover {
+  text-decoration: underline;
+}
+.main .right .list .item .text .a_desc {
+  padding-bottom: 10px;
+  line-height: 24px;
+}
+.main .right .list .item .text .a_info {
+  color: #999;
+  font-size: 12px;
+}
+.main .right .list .item .text .a_info span {
+  color: #00a7e1;
+}
+.main .right .list .item .text .a_info i {
+  margin: 0 8px;
+}
+.main .right .list .item .ask_text {
+  padding-right: 200px;
+}
+.main .right .list .item .ask_text .ask_title {
+  padding-bottom: 10px;
+}
+.main .right .list .item .ask_text .ask_title a {
+  font-size: 16px;
+  color: #00a7e1;
+}
+.main .right .list .item .ask_text .ask_title a:hover {
+  text-decoration: underline;
+}
+.main .right .list .item .ask_text .ask_content {
+  padding-bottom: 10px;
+  line-height: 24px;
+}
+.main .right .list .item .ask_text .ask_info {
+  color: #999;
+  font-size: 12px;
+}
+.main .right .list .item .ask_text .ask_info span {
+  color: #00a7e1;
+}
+.main .right .list .item .ask_text .ask_info i {
+  margin: 0 8px;
+}

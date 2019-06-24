@@ -1,0 +1,129 @@
+.main {
+  background-color: #fff;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+.main .w {
+  width: 980px;
+  margin: 0px auto;
+}
+.main .info {
+  position: relative;
+  padding: 0 0 50px 200px;
+  box-sizing: border-box;
+}
+.main .info .pic {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  background-color: #fff;
+}
+.main .info .pic img {
+  width: 100%;
+  height: 100%;
+}
+.main .info .username {
+  font-size: 28px;
+  color: #333;
+  padding: 25px 0 10px;
+  line-height: 34px;
+}
+.main .info p {
+  font-size: 12px;
+}
+.main .info p i {
+  margin: 0 5px;
+}
+.main .info p a {
+  color: #00a7e1;
+}
+.main .info p a:hover {
+  text-decoration: underline;
+}
+.main .travels {
+  height: 400px;
+}
+.main .travels .title {
+  width: 780px;
+  border-bottom: 2px solid #999;
+}
+.main .travels .title h3 {
+  float: left;
+  height: 30px;
+  padding: 0 10px;
+  margin-bottom: -2px;
+  line-height: 30px;
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.main .travels .title .active {
+  border-bottom: 2px solid #0189d5;
+}
+.main .travels .content {
+  position: relative;
+}
+.main .travels .content .list2 {
+  display: none;
+}
+.main .travels .content .list {
+  width: 780px;
+}
+.main .travels .content .list table {
+  width: 100%;
+}
+.main .travels .content .list table th {
+  text-align: left;
+  line-height: 35px;
+}
+.main .travels .content .list table tr {
+  border-top: 1px dotted #ddd;
+  line-height: 45px;
+}
+.main .travels .content .list table tr p {
+  line-height: 20px;
+  padding-right: 50px;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.main .travels .content .list table tr p span {
+  color: #f00;
+  margin-right: 10px;
+}
+.main .travels .content .list table tr p a {
+  color: #00a7e1;
+}
+.main .travels .content .list table tr p a:hover {
+  text-decoration: underline;
+}
+.main .travels .content .add_article {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 200px;
+}
+.main .travels .content .add_article a {
+  display: block;
+  border: 0;
+  background-color: #ff7534;
+  border-bottom: 2px solid #e44a00;
+  color: #fff;
+  text-align: center;
+  width: 125px;
+  height: 34px;
+  line-height: 36px;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.main .travels .content .add_article a:hover {
+  background-color: #fe5200;
+}

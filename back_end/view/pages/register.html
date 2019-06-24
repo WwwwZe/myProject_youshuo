@@ -1,0 +1,81 @@
+{{extend "./layouts/layouts2.html"}}
+
+{{block "title"}}
+<title>游说-用户注册</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/register.css">
+<script src="/assets/js/register.js"></script>
+<script src="/assets/lib/validate/jquery.validate.js"></script>
+{{/block}}
+
+{{block "body"}}
+<!-- main -->
+<div class="main">
+    <div class="container">
+        <div class="form_box">
+            <h2>游说会员注册</h2>
+            <form id="registerForm">
+                <div>
+                    <label for="avatar">选择头像:</label>
+                    <div class="pic">
+                        <input type="file" id="avatar">
+                    </div>
+                    <label class="show" for="avatar">+</label>
+                    <input type="hidden" name="picurl" id="picurl" class="picurl">
+                </div>
+                <div>
+                    <label for="nickname"><i>*</i> 昵称:</label>
+                    <input type="text" id="nickname" name="nickname">
+                </div>
+                <div>
+                    <label for="email"><i>*</i> 邮箱:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div>
+                    <label for="password"><i>*</i> 密码:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div>
+                    <label for="repassword"><i>*</i> 重复密码:</label>
+                    <input type="password" id="repassword" name="repassword">
+                </div>
+                <div>
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="name">性别:</label>
+                    <input type="radio" value="保密" name="gender" checked> 保密
+                    <input type="radio" value="男" name="gender"> 男
+                    <input type="radio" value="女" name="gender"> 女
+                </div>
+                <!-- <div>
+                    <label for="age">年龄:</label>
+                    <input type="text" id="age" name="age">
+                </div> -->
+                <div>
+                    <label for="tel">电话:</label>
+                    <input type="text" id="tel" name="tel">
+                </div>
+                <div>
+                    <label for="sign">签名:</label>
+                    <textarea id="sign" cols="60" rows="6" name="sign"></textarea>
+                </div>
+                <div class="btn">
+                    <input type="submit" value=" 注 册 " class="register">
+                    <input type="button" value=" 重 置 " class="reset">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block "js"}}
+<script>
+    
+</script>
+{{/block}}

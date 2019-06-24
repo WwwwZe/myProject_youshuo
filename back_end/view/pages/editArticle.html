@@ -1,0 +1,92 @@
+{{extend "./layouts/layouts.html"}}
+
+{{block "title"}}
+<title>修改游记</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/addArticle.css">
+<link rel="stylesheet" href="/assets/lib/umeditor/themes/default/css/umeditor.css">
+<script src="/assets/js/editArticle.js"></script>
+<script src="/assets/lib/umeditor/umeditor.config.js"></script>
+<script src="/assets/lib/umeditor/umeditor.min.js"></script>
+{{/block}}
+
+{{block "body"}}
+<!-- main -->
+<div class="main">
+    <div class="container">
+        <div class="title">
+            <h3>修改游记</h3>
+        </div>
+        <div class="form">
+            <form class="addarticleForm">
+                <div class="clearfix">
+                    <div class="col-lg-9">
+                        <div class="lab">
+                            <label for="title">标题</label>
+                            <input type="text" placeholder="游记标题" id="title" name="title" value="{{article.a_title}}">
+                        </div>
+                        <div class="lab">
+                            <label for="desc">描述</label>
+                            <textarea placeholder="游记描述" id="desc" name="desc">{{article.a_desc}}</textarea>
+                        </div>
+                        <div class="lab">
+                            <label for="content">内容</label>
+                            <textarea placeholder="内容" id="content" name="content">{{article.a_text}}</textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div>
+                            <label for="img">封面图像</label>
+                            <div class="pic">
+                                <input type="file" id="img">
+                                <input type="hidden" name="file" class="picurl" value="{{article.a_file}}">
+                            </div>
+                            <label class="show" for="img">
+                                {{if article.a_file}}
+                                <img src="{{article.a_file}}">
+                                {{else}}
+                                +
+                                {{/if}}
+                            </label>
+                            <input type="hidden">
+                        </div>
+                        <div>
+                            <label for="type1">地区分类</label>
+                            <select name="type1" id="type1">
+                                {{each type1 v}}
+                                <option value="{{v.t1_id}}" {{if article.a_type1id==v.t1_id}}selected{{/if}}>{{v.t1_name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div>
+                            <label for="type2">攻略分类</label> <br>
+                            <div class="tp2">
+                                {{each type2 v}}
+                                <span>
+                                    <input type="checkbox" value="{{v.t2_id}}" name="type2" {{each article.type2 vv}} {{if vv==v.t2_id}}checked{{/if}} {{/each}}>{{v.t2_name}}
+                                </span>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div>
+                            <label for="state">状态</label>
+                            <select name="state" id="state">
+                                <option value="草稿" {{if article.a_state=="草稿"}}selected{{/if}}>草稿</option>
+                                <option value="已发布" {{if article.a_state=="已发布"}}selected{{/if}}>发布</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="button" value=" 修 改 " class="editarticle">
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- backTop -->
+<div class="backTop"></div>
+{{/block}}

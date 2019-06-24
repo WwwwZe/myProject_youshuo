@@ -1,0 +1,126 @@
+{{extend "./layouts/layouts.html"}}
+
+{{block "title"}}
+<title>游记-{{article.a_title}}</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/detail.css">
+<script src="/assets/lib/twbs-pagination/jquery.twbsPagination.min.js"></script>
+<script src="/assets/js/detail.js"></script>
+{{/block}}
+
+{{block "body"}}
+<!-- body -->
+<div class="body">
+    <div class="m_header">
+        <div class="container">
+            <h2>{{article.a_title}}</h2>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main container">
+        <!-- left -->
+        <div class="left">
+            <!-- article -->
+            <div class="article">
+                <div>作者：{{ article.u_nickname }}</div>
+                <div class="start">
+                    发表于
+                    <span>{{article.a_addtime}}</span>
+                </div>
+                <div class="content">
+                    {{@ article.a_text }}
+                </div>
+                <p class="end">
+                    ~ THE END ~
+                </p>
+            </div>
+            <!-- comment -->
+            <div class="comment">
+                <div class="title">
+                    <h3>评论
+                        <!-- <span>({{article.a_cmt}})</span> -->
+                    </h3>
+                </div>
+                <div class="text">
+                    <div class="textarea">
+                        <textarea maxlength="500" placeholder="Hi,楼主等你的恢复呢~"></textarea>
+                        <p><span class="fontNum">0/500</span></p>
+                    </div>
+                    <button class="addComment">发表评论</button>
+                </div>
+                <div class="list">
+                    <!-- 模板 -->
+                </div>
+                <div class="page clearfix">
+                    <ul class="pagination clearfix"> </ul>
+                </div>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="right">
+            <div class="search clearfix">
+                <div class="title clearfix">
+                    <h3>搜索</h3>
+                </div>
+                <div class="searchbar">
+                    <input type="text" placeholder="搜索游记相关内容">
+                    <button>
+                        <span class="iconfont icon-ai219"></span>
+                    </button>
+                    <div class="searchList">
+                        <ul>
+                            <!-- <li><a href="">11</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="random">
+                <div class="title clearfix">
+                    <h3>随机推荐</h3>
+                </div>
+                <div class="content">
+                    <ul>
+                        {{each rand v}}
+                        <li>
+                            <a href="/detail/{{v.a_id}}">
+                                <div class="text">{{v.a_title}}</div>
+                                <div class="pic">
+                                    <img src="{{v.a_file}}" alt="{{v.a_title}}">
+                                </div>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- backTop -->
+    <div class="backTop"></div>
+</div>
+{{/block}}
+
+{{block "js"}}
+<script type="text/html" id="pagelist">
+    {(each comment v)}
+    <div class="item">
+        <div class="pic">
+            {(if v.u_pic)}
+            <img src="{(v.u_pic)}">
+            {(else)}
+            <img src="/assets/images/user_default.png">
+            {(/if)}
+        </div>
+        <div class="txt">
+            <div class="username">{(v.u_nickname)}</div>
+            <p class="content">
+                {(v.cmt_content)}
+            </p>
+            <div class="time">发表于<span>{(v.cmt_addtime)}</span></div>
+        </div>
+    </div>
+    {(/each)}
+</script>
+{{/block}}

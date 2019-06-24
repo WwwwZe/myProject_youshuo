@@ -1,0 +1,116 @@
+{{extend "./layouts/layouts.html"}}
+
+{{block "title"}}
+<title>问答</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/answer.css" />
+<script src="/assets/lib/twbs-pagination/jquery.twbsPagination.min.js"></script>
+<script src="/assets/js/answer.js"></script>
+{{/block}}
+
+{{block "body"}}
+<div class="main">
+    <div class="top container">
+        <div class="title">
+            <h2>游说社区问答</h2>
+        </div>
+        <div class="search clearfix">
+            <input type="text" placeholder="提问前不妨搜索下，看看你的问题是否已经有人提问过" />
+            <a href="javascript:;" class="searchbtn">搜 索</a>
+            <a href="/newquestion" class="askbtn"><i>+</i><span>我要提问</span></a>
+            <div class="searchList">
+                <ul>
+                    <!-- <li><a href="#">1111</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content container clearfix">
+        <div class="left fl">
+            <div class="ask">
+                <div class="a_info">
+                    <span>{{ask.u_nickname}}</span>
+                    <i>发表于{{ask.ask_addtime}}</i>
+                </div>
+                <div class="a_title">
+                    <span class="iconfont icon-wendabangzhu"></span>
+                    {{ask.ask_title}}
+                </div>
+                <p class="a_desc">
+                    {{ask.ask_content}}
+                </p>
+            </div>
+            <div class="answer">
+                <div class="textarea">
+                    <textarea maxlength="500" placeholder="分享自己精彩的旅行经验，有指导性的回答将得到所有人的感激。"></textarea>
+                    <span>0/500</span>
+                </div>
+                <a href="javascript:;" class="addAskComment">回 答</a>
+            </div>
+            <div class="list">
+                <div class="l_title">
+                    <h3>全部回答</h3>
+                </div>
+                <div class="lists">
+                    <!-- 模板 -->
+                </div>
+                <div class="page clearfix">
+                    <ul class="pagination clearfix"> </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right fr">
+            <div class="login">
+                {{if userInfo}}
+                <div class="pic fl">
+                    {{if userInfo.u_pic}}
+                    <img src="{{ userInfo.u_pic }}" />
+                    {{else}}
+                    <img src="/assets/images/user_default.png" />
+                    {{/if}}
+                </div>
+                <div class="info fl">
+                    <span>{{ userInfo.u_nickname }}</span>
+                    <p><a href="/member">个人中心</a></p>
+                </div>
+                {{else}}
+                <div class="pic fl">
+                    <img src="../assets/images/user_default.png" alt="" />
+                </div>
+                <div class="info fl">
+                    <a href="/login">请先登录</a>
+                    <p>以便提问和回答</p>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block "js"}}
+<script type="text/html" id="pagelist">
+    {(each comment v)}
+    <div class="item">
+        <div class="pic">
+            {(if v.u_pic)}
+            <img src="{(v.u_pic)}">
+            {(else)}
+            <img src="../assets/images/user_default.png">
+            {(/if)}
+        </div>
+        <div class="text">
+            <div class="info">
+                <span>{(v.u_nickname)}</span>
+                发表于{(v.ac_addtime)}
+            </div>
+            <p class="txt">
+                {(v.ac_content)}
+            </p>
+        </div>
+    </div>
+    {(/each)}
+</script>
+{{/block}}

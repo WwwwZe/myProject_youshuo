@@ -1,0 +1,111 @@
+body {
+    background-color: #fff;
+}
+
+// header
+.header {
+    padding: 10px;
+
+    h1 {
+        font-size: 0;
+    }
+
+    img {
+        width: 125px;
+        height: 60px;
+        user-select: none;
+    }
+}
+
+// main
+.main {
+    height: 460px;
+    background: url(../images/login-bg.jpg);
+    background-size: cover;  
+    .container {
+        position: relative;
+        .form-box {
+            position: absolute;
+            top: 50px;
+            right: 150px;
+            // width: 320px;
+            // height: 300px;
+            padding: 30px 30px 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 6px rgba(0,0,0,.1);
+            h2 {
+                color: #111;
+                font-size: 18px;
+                padding-bottom: 16px;
+                border-bottom: 1px dashed #ccc;
+            }
+            div {
+                padding: 8px 0;
+            }
+            input {
+                // width: 300px;
+                width: 320px;
+                // height: 28px;
+                height: 40px;
+                padding: 5px 5px 5px 13px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                color: #333;
+                border-radius: 3px;
+            }
+            input:focus {
+                border-color: rgba(102, 175, 233, .8);
+                box-shadow: 0 0 0 2px rgba(102, 175, 233, .4);
+            }
+            a {
+                display: inline-block;
+                width: 320px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                margin-top: 15px;
+                border: 0;
+                outline: 0;
+                color: #fff;
+                font-size: 16px;
+                border-radius: 4px;  
+                cursor:pointer;   
+            }
+            .login {
+                background-color: #FF9A14;
+                &:hover {
+                    background-color: #CC7B10;
+                }
+            }
+            .reset {
+                background-color: #ccc;
+                &:hover {
+                    background-color: #aaa;
+                }
+            }
+
+            // 滑块验证
+            .verify-wrap {
+                border-radius: 3px;
+                overflow: hidden;
+            }
+            .fix-tips, .verify-msg {
+                top: 0;
+            }
+        }
+    }
+}
+
+// footer
+.footer {
+    line-height: 50px;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px dashed #9ECCF5;
+
+    p {
+        padding-left: 30px;
+    }
+}

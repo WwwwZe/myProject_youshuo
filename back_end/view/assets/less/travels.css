@@ -1,0 +1,238 @@
+.body .body_header {
+  height: 50px;
+  margin-top: 20px;
+  line-height: 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px #dadada;
+}
+.body .body_header ul li {
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+.body .body_header ul li a {
+  display: block;
+}
+.body .body_header ul li:hover {
+  border-bottom: 3px solid #2f9be8;
+}
+.body .body_header ul li:hover a {
+  color: #2f9be8;
+}
+.body .body_header ul li.active {
+  border-bottom: 3px solid #2f9be8;
+}
+.body .body_header ul li.active a {
+  color: #2f9be8;
+}
+.body .main {
+  margin-top: 20px;
+  display: flex;
+}
+.body .main .left {
+  width: 280px;
+  margin-right: 20px;
+}
+.body .main .left .title h3 {
+  float: left;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2f9be8;
+}
+.body .main .left .search {
+  padding: 15px 20px;
+  background-color: #fff;
+}
+.body .main .left .search input {
+  float: left;
+  width: 190px;
+  height: 20px;
+  border: 1px solid #ddd;
+  padding: 5px 5px 5px 10px;
+  color: #666;
+  border-right: 0;
+}
+.body .main .left .search button {
+  float: left;
+  height: 32px;
+  width: 30px;
+  border: 0;
+  color: #fff;
+  background-color: #00a7e1;
+  cursor: pointer;
+}
+.body .main .left .search button:hover {
+  background-color: #2577e3;
+}
+.body .main .left .search .searchbar {
+  position: relative;
+}
+.body .main .left .search .searchbar .searchList {
+  display: none;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  z-index: 99;
+  width: 205px;
+  padding: 8px 0;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.body .main .left .search .searchbar .searchList a {
+  display: block;
+  padding: 5px;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body .main .left .search .searchbar .searchList a:hover {
+  background-color: #eee;
+}
+.body .main .left .random {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+.body .main .left .random .content li {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+.body .main .left .random .content li a {
+  display: flex;
+}
+.body .main .left .random .content .text {
+  flex: 1;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.body .main .left .random .content .pic {
+  width: 70px;
+  margin-left: 5px;
+}
+.body .main .left .random .content .pic img {
+  width: 100%;
+}
+.body .main .right {
+  flex: 1;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.body .main .right .title h2 {
+  float: left;
+  height: 46px;
+  line-height: 46px;
+  padding-left: 15px;
+  border-top: 1px solid #00a7e1;
+}
+.body .main .right .content {
+  padding: 20px 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 0;
+  background-color: #fff;
+}
+.body .main .right .r_item {
+  display: flex;
+  padding: 0 20px;
+}
+.body .main .right .r_item:hover {
+  background-color: #f5fbfe;
+}
+.body .main .right .r_item a {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.body .main .right .r_item a .r_pic {
+  width: 210px;
+  height: 140px;
+  margin-right: 20px;
+}
+.body .main .right .r_item a .r_pic img {
+  width: 100%;
+}
+.body .main .right .r_item a .r_text {
+  position: relative;
+  flex: 1;
+  padding-right: 100px;
+}
+.body .main .right .r_item a .r_text .r_title {
+  padding-bottom: 10px;
+  color: #00a7e1;
+  font-size: 18px;
+  display: block;
+  width: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body .main .right .r_item a .r_text .r_title a:hover {
+  color: #1ba8df;
+}
+.body .main .right .r_item a .r_text p {
+  padding-bottom: 5px;
+  font-size: 12px;
+  color: #999;
+}
+.body .main .right .r_item a .r_text p span {
+  margin-right: 8px;
+}
+.body .main .right .r_item a .r_text .r_desc {
+  color: #333;
+  padding-bottom: 15px;
+}
+.body .main .right .r_item a .r_text .r_tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  padding: 5px 0 5px 15px;
+  border-left: 3px solid #ddd;
+}
+.body .main .right .r_item a:hover .r_title {
+  text-decoration: underline;
+}
+.body .main .right .page {
+  padding: 20px;
+}
+.body .main .right .pagination {
+  float: right;
+  margin-right: 10px;
+}
+.body .main .right .pagination .active {
+  background-color: #0a56bb;
+}
+.body .main .right .pagination .active a {
+  color: #fff;
+}
+.body .main .right .pagination .active:hover {
+  background-color: #0a56bb;
+}
+.body .main .right .pagination li {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-left: 0;
+}
+.body .main .right .pagination li a {
+  color: #333;
+}
+.body .main .right .pagination li:first-child {
+  border-left: 1px solid #ddd;
+}
+.body .main .right .pagination li:last-child,
+.body .main .right .pagination li:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.body .main .right .pagination li:hover {
+  background-color: #eee;
+}

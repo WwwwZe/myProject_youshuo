@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {{block 'title' }}
+  {{/block}}
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <link rel="stylesheet" href="/assets/lib/nprogress/nprogress.css">
+  <script src="/assets/lib/jquery/jquery.min.js"></script>
+  <script src="/assets/lib/art-template/template-web.js"></script>
+  <script src="/assets/lib/nprogress/nprogress.js"></script>
+  <script src="../assets/lib/layer/layer.js"></script>
+  <script src="assets/js/layouts.js"></script>
+  {{block 'css/js' }}
+  {{/block}}
+</head>
+
+<body>
+  <script>
+    NProgress.start()
+  </script>
+  <!-- shortcut -->
+  <div class="shorcut">
+    <div class="container">
+      <div class="col-lg-9 col-md-9">
+        <span>上游说，让旅行更幸福</span>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        {{if  isLocation}}
+        <div class="user_info">
+          <div class="user">
+            尊敬的用户
+          </div>
+          <div class="info">
+            <i class="logout"><a href="javascript:;">退出</a></i>
+            <div class="pic fl">
+              {{if userInfo.u_pic}}
+              <img src="{{userInfo.u_pic}}">
+              {{else}}
+              <img src="/assets/images/user_default.png">
+              {{/if}}
+            </div>
+            <div class="text fl">
+              {{ userInfo.u_nickname }}
+              <p>
+                <a href="/member">个人中心</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        {{else}}
+        <div>
+          <a href="/login" class="login">您好，请登录</a>
+          <a href="/register" class="register">免费注册</a>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  <!-- header -->
+  <div class="header">
+    <!-- logo -->
+    <div class="logo container">
+      <h1>
+        <a href="/index">
+          游说
+          <img src="./assets/images/logo.png" alt="" />
+        </a>
+      </h1>
+    </div>
+    <!-- nav -->
+    <div class="nav">
+      <div class="container">
+        <ul class="navmenu">
+          <!-- <li class="active">
+            <a href="/index">
+              <span class="iconfont icon-home"></span>
+              首页
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- body -->
+  {{block 'body' }}
+  {{/block}}
+  <!-- footer -->
+  <div class="footer container">
+    <p>
+      © 2019 游说社区旅游攻略网站 本站由 吉林农业科技学院 电气与信息工程学院
+      计算机二班 王泽 提供
+    </p>
+  </div>
+  <script>
+    NProgress.done()
+  </script>
+</body>
+<script type="text/html" id="navmenuM">
+  {( each navmenu v,k )}
+  {(if k == 0)}
+  <li {(if k==num)} class="active" {(/if)}> <a href="{(v.path)}">
+    <span class="iconfont {(v.icon)}"></span>
+    {(v.name)}
+    </a>
+  </li>
+  {(else)}
+  <li class="line"></li>
+  <li {(if k==num)} class="active" {(/if)}> <a href="{(v.path)}">
+    <span class="iconfont {(v.icon)}"></span>
+    {(v.name)}
+    </a>
+  </li>
+  {(/if)}
+  {( /each )}
+</script>
+
+<!-- <script src="/assets/js/layouts.js"></script> -->
+{{block "js"}}
+{{/block}}
+
+
+</html>

@@ -1,0 +1,116 @@
+{{extend "./layouts/layouts.html"}}
+
+{{block "title"}}
+<title>个人中心</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="/assets/less/member.css">
+<script src="/assets/js/member.js"></script>
+{{/block}}
+
+
+{{block "body"}}
+<!-- main -->
+<div class="main">
+    <div class="m_header w">
+        <img src="../assets/images/member-bg.jpg" alt="">
+    </div>
+    <div class="info w">
+        <div class="pic">
+            {{if userInfo.u_pic}}
+            <img src="{{userInfo.u_pic}}">
+            {{else}}
+            <img src="/assets/images/user_default.png">
+            {{/if}}
+        </div>
+        <div class="username">{{userInfo.u_nickname}}</div>
+        <p>
+            <span>{{userInfo.c_time}}</span>加入
+            <i>|</i>
+            <a href="/userInfoUpdate">编辑个人资料></a>
+            <i>|</i>
+            <a href="/changePassword">修改密码</a>
+        </p>
+    </div>
+    <div class="travels w">
+        <div class="title clearfix">
+            <h3 class="active">游记</h3>
+            <h3>问答</h3>
+        </div>
+        <div class="content">
+            <div class="list list1">
+                <table>
+                    <tr>
+                        <th width="125px">发表日期</th>
+                        <th width="530px">标题</th>
+                        <th>编辑</th>
+                    </tr>
+                    {{if article.length}}
+                    {{each article v}}
+                    <tr>
+                        <td>{{v.a_addtime}}</td>
+                        <td>
+                            <p>
+                                <span>[{{v.a_state}}]</span>
+                                <a href="/detail/{{v.a_id}}">{{v.a_title}}</a>
+                            </p>
+                        </td>
+                        <td>
+                            <a href="/editArticle/{{v.a_id}}">编辑</a>
+                            <a href="javascript:;" class="delArticle" articleid="{{v.a_id}}">删除</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                    {{else}}
+                    <tr>
+                        <td colspan="3" align="center">您还未写游记</td>
+                    </tr>
+                    {{/if}}
+                    
+                </table>
+            </div>
+            <div class="list list2">
+                    <table>
+                        <tr>
+                            <th width="125px">提问日期</th>
+                            <th width="530px">问题标题</th>
+                            <th>编辑</th>
+                        </tr>
+                        {{if ask.length}}
+                        {{each ask v}}
+                        <tr>
+                            <td>{{v.ask_addtime}}</td>
+                            <td>
+                                <p>
+                                    <a href="/answer/{{v.ask_id}}">{{v.ask_title}}</a>
+                                </p>
+                            </td>
+                            <td>
+                                <a href="javascript:;" class="delAsk" askid="{{v.ask_id}}">删除</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                        {{else}}
+                        <tr>
+                            <td colspan="3" align="center">您还未提问</td>
+                        </tr>
+                        {{/if}}
+                        
+                    </table>
+                </div>
+            <div class="add_article">
+                <a href="/addarticle">
+                    <span class="iconfont icon-gonglve"></span>
+                    写游记
+                </a>
+                <a href="/newquestion">
+                    <span class="iconfont icon-wenda"></span>
+                    提问
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{{/block}}

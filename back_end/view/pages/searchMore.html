@@ -1,0 +1,95 @@
+{{extend "./layouts/layouts.html"}}
+
+{{block "title"}}
+<title>搜索结果</title>
+{{/block}}
+
+{{block "css/js"}}
+<link rel="stylesheet" href="../assets/less/searchMore.css">
+<script src="../assets/js/searchMore.js"></script>
+{{/block}}
+
+{{block "body"}}
+<div class="main">
+    <div class="top container">
+        <h2>搜索关键词 <span>"{{query}}"</span></h2>
+    </div>
+    <div class="bottom container">
+        <div class="left">
+            <ul>
+                <li>
+                    <a href="/searchMore/travels/{{query}}" {{if type=="travels"}} class="active" {{/if}}>
+                        游记
+                        <span>({{travelsNum}})</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/searchMore/asks/{{query}}" {{if type=="asks"}} class="active" {{/if}}>
+                        问答
+                        <span>({{asksNum}})</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="title">
+                <h3>
+                    {{if type=="travels"}} 游记 <span>({{travelsNum}})</span> {{/if}}
+                    {{if type=="asks"}} 问答 <span>({{asksNum}})</span> {{/if}}
+                </h3>
+            </div>
+            <div class="list">
+                {{if list.length==0}}
+                <div class="empty">
+                    没有找到相关结果
+                </div>
+                {{else}}
+                {{each list v}}
+                {{if type == "travels"}}
+                <div class="item clearfix">
+                    <div class="pic fl">
+                        <a href="">
+                            <img src="{{v.a_file}}">
+                        </a>
+                    </div>
+                    <div class="text fl">
+                        <div class="a_title">
+                            <a href="/detail/{{v.a_id}}">{{v.a_title}}</a>
+                        </div>
+                        <p class="a_desc">{{v.a_desc}}</p>
+                        <div class="a_info">
+                            <span>{{v.u_nickname}}</span>
+                            发表于 {{v.a_addtime}}
+                            <i>|</i>
+                            {{v.a_cmt}}条评论
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{if type == "asks"}}
+                <div class="item">
+                    <div class="ask_text">
+                        <div class="ask_title">
+                            <a href="/answer/{{v.ask_id}}">
+                                {{v.ask_title}}
+                            </a>
+                        </div>
+                        <div class="ask_content">{{v.ask_content}}</div>
+                        <div class="ask_info">
+                            <span>{{v.u_nickname}}</span>
+                            发表于 {{v.ask_addtime}}
+                            <i>|</i>
+                            {{v.ask_cmt}}条评论
+                        </div>
+                    </div>
+
+                </div>
+                {{/if}}
+                {{/each}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+</div>
+{{/block}}

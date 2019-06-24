@@ -1,0 +1,312 @@
+.body {
+  margin-top: 20px;
+}
+.body .m_header {
+  height: 80px;
+  line-height: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.body .m_header h2 {
+  padding-left: 30px;
+}
+.body .main {
+  display: flex;
+}
+.body .main .left {
+  flex: 1;
+  margin-bottom: 70px;
+}
+.body .main .left .article {
+  background-color: #fff;
+  padding: 40px 40px 0px;
+}
+.body .main .left .article .start {
+  margin-top: 10px;
+  padding: 30px 0 20px;
+  border-top: 1px dotted #ddd;
+  font-size: 14px;
+  color: #999;
+}
+.body .main .left .article .end {
+  height: 80px;
+  margin-top: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  border-top: 1px dotted #ddd;
+  color: #ccc;
+}
+.body .main .left .comment {
+  margin-top: 40px;
+}
+.body .main .left .comment .title h3 {
+  font-size: 24px;
+  color: #111;
+}
+.body .main .left .comment .title h3 span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.body .main .left .comment .text {
+  padding: 40px 0 0 80px;
+}
+.body .main .left .comment .text .textarea {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.body .main .left .comment .text .textarea textarea {
+  resize: none;
+  width: 99%;
+  height: 120px;
+}
+.body .main .left .comment .text .textarea p span {
+  float: right;
+  margin-right: 10px;
+  color: #999;
+}
+.body .main .left .comment .text button {
+  border: 0;
+  padding: 5px 15px;
+  margin-top: 10px;
+  background-color: #ff7534;
+  color: #fff;
+  font-size: 14px;
+  border-bottom: 2px solid #e44a00;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.body .main .left .comment .text button:hover {
+  background-color: #fe5200;
+}
+.body .main .left .comment .list {
+  margin-top: 40px;
+  border-top: 1px dotted #ccc;
+}
+.body .main .left .comment .item {
+  padding: 30px 0;
+  border-bottom: 1px dotted #ccc;
+  display: flex;
+}
+.body .main .left .comment .item .pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 25px;
+}
+.body .main .left .comment .item .pic img {
+  width: 100%;
+  height: 100%;
+}
+.body .main .left .comment .item .txt {
+  flex: 1;
+}
+.body .main .left .comment .item .txt .username {
+  color: #000;
+  margin-bottom: 8px;
+}
+.body .main .left .comment .item .txt .content {
+  line-height: 20px;
+  padding-right: 10%;
+  word-break: break-all;
+}
+.body .main .left .comment .item .txt .time {
+  margin-top: 10px;
+  line-height: 12px;
+  color: #999;
+}
+.body .main .left .comment .page {
+  padding: 20px;
+}
+.body .main .left .comment .pagination {
+  float: right;
+  margin-right: 10px;
+}
+.body .main .left .comment .pagination .active {
+  background-color: #0a56bb;
+}
+.body .main .left .comment .pagination .active a {
+  color: #fff;
+}
+.body .main .left .comment .pagination .active:hover {
+  background-color: #0a56bb;
+}
+.body .main .left .comment .pagination li {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-left: 0;
+}
+.body .main .left .comment .pagination li a {
+  color: #333;
+}
+.body .main .left .comment .pagination li:first-child {
+  border-left: 1px solid #ddd;
+}
+.body .main .left .comment .pagination li:last-child,
+.body .main .left .comment .pagination li:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.body .main .left .comment .pagination li:hover {
+  background-color: #eee;
+}
+.body .main .right {
+  width: 280px;
+  margin-left: 20px;
+}
+.body .main .right .title h3 {
+  float: left;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2f9be8;
+}
+.body .main .right .search {
+  padding: 15px 20px;
+  background-color: #fff;
+}
+.body .main .right .search input {
+  float: left;
+  width: 190px;
+  height: 20px;
+  border: 1px solid #ddd;
+  padding: 5px 5px 5px 10px;
+  color: #666;
+  border-right: 0;
+}
+.body .main .right .search button {
+  float: left;
+  height: 32px;
+  width: 30px;
+  border: 0;
+  color: #fff;
+  background-color: #00a7e1;
+  cursor: pointer;
+}
+.body .main .right .search button:hover {
+  background-color: #2577e3;
+}
+.body .main .right .search .searchbar {
+  position: relative;
+}
+.body .main .right .search .searchbar .searchList {
+  display: none;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  z-index: 99;
+  width: 205px;
+  padding: 8px 0;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.body .main .right .search .searchbar .searchList a {
+  display: block;
+  padding: 5px;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body .main .right .search .searchbar .searchList a:hover {
+  background-color: #eee;
+}
+.body .main .right .random {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+.body .main .right .random .content li {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+.body .main .right .random .content li a {
+  display: flex;
+}
+.body .main .right .random .content .text {
+  flex: 1;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.body .main .right .random .content .pic {
+  width: 70px;
+  margin-left: 5px;
+}
+.body .main .right .random .content .pic img {
+  width: 100%;
+}
+.body .backTop {
+  display: none;
+  position: fixed;
+  width: 51px;
+  height: 51px;
+  bottom: 50px;
+  right: 12px;
+  z-index: 10000;
+  background: url(../images/backTop.png) no-repeat -5px -5px;
+  background-size: 65px 60px;
+  cursor: pointer;
+}
+.form-box {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 50px;
+}
+.form-box h2 {
+  color: #111;
+  font-size: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #ccc;
+}
+.form-box div {
+  padding: 8px 0;
+}
+.form-box input {
+  width: 300px;
+  height: 28px;
+  padding: 5px 5px 5px 13px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+  border-radius: 3px;
+}
+.form-box input:focus {
+  border-color: rgba(102, 175, 233, 0.8);
+  box-shadow: 0 0 0 2px rgba(102, 175, 233, 0.4);
+}
+.form-box a {
+  display: inline-block;
+  width: 320px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-box .login {
+  background-color: #FF9A14;
+}
+.form-box .login:hover {
+  background-color: #CC7B10;
+}
+.form-box .reset {
+  background-color: #ccc;
+}
+.form-box .reset:hover {
+  background-color: #aaa;
+}
